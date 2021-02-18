@@ -47,6 +47,14 @@ export default {
       this.chart = echarts.init(this.$el, 'macarons')
 
       this.chart.setOption({
+        title: {
+          text: '维修区域分布',
+          textStyle: {
+            color: 'rgba(0,0,0,0.45)',
+            fontSize: 14,
+            fontWeight: 'bold'
+          }
+        },
         tooltip: {
           trigger: 'axis',
           axisPointer: { // 坐标轴指示器，坐标轴触发有效
@@ -54,17 +62,20 @@ export default {
           }
         },
         grid: {
-          top: 10,
+          top: 40,
           left: '2%',
           right: '2%',
-          bottom: '3%',
+          bottom: 13,
           containLabel: true
         },
         xAxis: [{
           type: 'category',
-          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          data: ['南苑', '中苑', '北苑', '中苑食堂', '北苑食堂', '教职工食堂', '教学楼'],
           axisTick: {
             alignWithLabel: true
+          },
+          axisLabel: {
+            interval: 0
           }
         }],
         yAxis: [{
@@ -74,25 +85,11 @@ export default {
           }
         }],
         series: [{
-          name: 'pageA',
+          name: '次数',
           type: 'bar',
           stack: 'vistors',
           barWidth: '60%',
           data: [79, 52, 200, 334, 390, 330, 220],
-          animationDuration
-        }, {
-          name: 'pageB',
-          type: 'bar',
-          stack: 'vistors',
-          barWidth: '60%',
-          data: [80, 52, 200, 334, 390, 330, 220],
-          animationDuration
-        }, {
-          name: 'pageC',
-          type: 'bar',
-          stack: 'vistors',
-          barWidth: '60%',
-          data: [30, 52, 200, 334, 390, 330, 220],
           animationDuration
         }]
       })

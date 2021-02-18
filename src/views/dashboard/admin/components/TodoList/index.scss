@@ -70,7 +70,7 @@
     position: relative;
     margin: 0;
     width: 100%;
-    font-size: 18px;
+    font-size: 16px;
     font-family: inherit;
     font-weight: inherit;
     line-height: 1.4em;
@@ -103,11 +103,11 @@
   }
   .toggle-all+label {
     width: 60px;
-    height: 34px;
+    height: 43px;
     font-size: 0;
     position: absolute;
     top: -52px;
-    left: -13px;
+    left: -20px;
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
   }

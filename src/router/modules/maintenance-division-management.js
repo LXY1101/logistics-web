@@ -9,20 +9,14 @@ const maintenanceDivisionManagementRouter = {
   name: 'maintenanceDivisionManagement',
   meta: {
     title: '维修分区管理',
-    icon: 'eye-open'
+    icon: 'form'
   },
   children: [
     {
-      path: 'sysLog',
-      component: () => import('@/views/sysMonitor/sysLog'),
-      name: 'sysLog',
-      meta: { title: '系统日志', noCache: true }
-    },
-    {
-      path: 'OnlineUsers',
-      component: () => import('@/views/sysMonitor/OnlineUsers'),
-      name: 'OnlineUsers',
-      meta: { title: '在线用户', noCache: true }
+      path: 'divisionInfo',
+      component: () => import('@/views/division-management/divisionInfo'),
+      name: 'divisionInfo',
+      meta: { title: '维修分区管理', noCache: true }
     }
   ]
 }

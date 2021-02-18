@@ -8,32 +8,14 @@ const maintenanceClassificationManagementRouter = {
   name: 'maintenanceClassificationManagement',
   meta: {
     title: '维修分类管理',
-    icon: 'form'
+    icon: 'table'
   },
   children: [
     {
-      path: 'stock',
-      component: () => import('@/views/warehoust/stock'),
-      name: 'stock',
-      meta: { title: '库存信息', noCache: true }
-    },
-    {
-      path: 'using',
-      component: () => import('@/views/warehoust/using'),
-      name: 'using',
-      meta: { title: '申请物品使用', noCache: true }
-    },
-    {
-      path: 'purchase',
-      component: () => import('@/views/warehoust/purchase'),
-      name: 'purchase',
-      meta: { title: '申请物品采购单', noCache: true }
-    },
-    {
-      path: 'piece',
-      component: () => import('@/views/warehoust/piece'),
-      name: 'piece',
-      meta: { title: '维护物品价格', noCache: true }
+      path: 'classification',
+      component: () => import('@/views/classification-management/classification'),
+      name: 'classification',
+      meta: { title: '维修分类管理', noCache: true }
     }
   ]
 }

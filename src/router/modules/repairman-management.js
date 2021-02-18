@@ -9,20 +9,14 @@ const repairmanManagementRouter = {
   name: 'repairmanManagement',
   meta: {
     title: '维修人员管理',
-    icon: 'eye-open'
+    icon: 'peoples'
   },
   children: [
     {
-      path: 'sysLog',
-      component: () => import('@/views/sysMonitor/sysLog'),
-      name: 'sysLog',
-      meta: { title: '系统日志', noCache: true }
-    },
-    {
-      path: 'OnlineUsers',
-      component: () => import('@/views/sysMonitor/OnlineUsers'),
-      name: 'OnlineUsers',
-      meta: { title: '在线用户', noCache: true }
+      path: 'repairmanInfo',
+      component: () => import('@/views/repairman-management/repairmanInfo'),
+      name: 'repairmanInfo',
+      meta: { title: '维修人员管理', noCache: true }
     }
   ]
 }

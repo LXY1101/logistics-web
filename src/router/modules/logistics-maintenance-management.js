@@ -2,26 +2,20 @@
 import Layout from '@/layout'
 
 const logisticsMaintenanceManagementRouter = {
-  path: '/logisticsMaintenanceManagement',
+  path: '/logMaintenanceManagement',
   component: Layout,
   redirect: 'noRedirect',
-  name: 'logisticsMaintenanceManagement',
+  name: 'logMaintenanceManagement',
   meta: {
     title: '后勤维修管理',
-    icon: 'skill'
+    icon: 'nested'
   },
   children: [
     {
-      path: 'examine',
-      component: () => import('@/views/registration-management/examine'),
-      name: 'examine',
-      meta: { title: '审核报名', noCache: true }
-    },
-    {
-      path: 'query',
-      component: () => import('@/views/registration-management/query'),
-      name: 'query',
-      meta: { title: '查询报名', noCache: true }
+      path: 'queryLogMaintenance',
+      component: () => import('@/views/logistics-maintenance-management/queryLogMaintenance'),
+      name: 'queryLogMaintenance',
+      meta: { title: '后勤维修管理', noCache: true }
     }
   ]
 
